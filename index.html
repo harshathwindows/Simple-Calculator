@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body style="background-image:url(./mathsbg.png);">
+    <div id="textContent">
+        <h3>SIMPLE MATH CACULATION</h3>
+    Input Number 1:<input type="number" value="" id="num1" placeholder="Enter a Number">
+    <br>
+    Input Number 2:<input type="number" value="" id="num2" placeholder="Enter a Number">
+    <br>
+    <div id="btn">
+    <button  id="add" onclick="add()">+</button>
+    <button  id="sub" onclick="sub()">-</button>
+    <button id="multi" onclick="multi()">x</button>
+    <button id="div" onclick="div()">%</button>
+    <button id="rst" onclick="reset()">Reset</button>
+    </div>
+    <h4 id="result">Waiting For Answer!!!</h4>
+    </div>
+</body>
+</html>
+<style>
+    *{
+        text-align: center;
+    }
+    #textContent
+    {
+        margin-top: 12%;
+        margin-right: 17%;
+        font-size: 220%;
+    }
+    #num1{
+        font-size: 60%;
+    }
+    #num2{
+        font-size: 60%;
+    }
+    #btn{
+         size: 50%;
+    }
+    #add{
+        font-size: 50%
+    }
+    #sub{
+        font-size: 50%;
+    }
+    #multi{
+        font-size: 50%;
+        
+    }
+    #div{
+        font-size: 50%;
+    }
+    #rst{
+        font-size: 50%;
+    }
+</style>
+<script>
+    var a=document.getElementById("num1")
+    var b=document.getElementById("num2")
+    var c=document.getElementById("result")
+    function add()
+    {
+        console.log(c.textContent=Number(a.value)+Number(b.value))
+    }
+
+    function sub()
+    {
+        console.log(c.textContent=Number(a.value) - Number(b.value))
+    }
+
+    function multi()
+    {
+        console.log(c.textContent=Number(a.value)*Number(b.value))
+    }
+
+    function div()
+    {
+        console.log(c.textContent=Number(a.value)/Number(b.value))
+    }
+    function reset()
+    {
+        console.log(a.value="")
+        console.log(b.value="")
+        console.log(c.textContent="Waiting For Answer!!!")
+    }
+</script>
